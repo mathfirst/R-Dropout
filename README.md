@@ -20,7 +20,7 @@ import torch
 import torch.nn as nn
 
 log_softmax = nn.LogSoftmax(dim=-1)
-kl_loss_fn = nn.KLDivLoss(reduction="sum", log_target= True)
+kl_loss_fn = nn.KLDivLoss(reduction="sum", log_target=True)
 nll_loss_fn = nn.NLLLoss()
 def r_dropout_loss(model, data, y, alpha=0.05): 
     # alpha is the regularization coefficient. It should be not too large.
